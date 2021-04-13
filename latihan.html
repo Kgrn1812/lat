@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kalkulator</title>
+</head>
+<body>
+    <input  id="angka1" placeholder="angka 1">
+    <br><input  id="operator" placeholder="operator">
+    <br><input  id="angka2" placeholder="angka 2" > 
+    <br><button style="background-color: greenyellow; color: rgb(207, 5, 5);" 
+    onclick="kalkulator()" id="hasil">=</button>
+    <br><button onclick="reset()" id="reset">reset</button>
+    
+<br>
+    <h1 id="hasiljadi">0</h1>
+<br><br> <a href="latihanaja.html">kembali</a>
+    <script type="text/javascript">
+  
+  function reset(val) {
+        document.getElementById('angka1').value = "angka1"
+        document.getElementById('operator').value = "operator"
+        document.getElementById('angka2').value = "angka2"
+        document.getElementById('hasiljadi').innerHTML = "0"
+    } 
+
+    function kalkulator() {
+        let angka1 = document.getElementById("angka1").value
+        let operator = document.getElementById("operator").value
+        let angka2 = document.getElementById("angka2").value
+        let hasiljadi = document.getElementById("hasiljadi") 
+
+        // console.log(diisi disini)
+        console.log(angka1)
+        console.log(angka2)
+
+    // conditional if (kondisinya) {} else if (kondisi) {} else{}
+    // AND && , OR ||
+    if(operator == '+') {
+        let hitung= parseInt(angka1) + parseInt(angka2)
+        hasiljadi.innerHTML= hitung
+    } else if (operator == '-'){
+        let hitung = parseInt(angka1) - parseInt(angka2)
+        hasiljadi.innerHTML=  hitung
+    } else if (operator == '*'){
+        let hitung= parseInt(angka1) * parseInt(angka2)
+        hasiljadi.innerHTML= hitung
+    }
+    }
+    
+
+
+    
+    </script>
+</body>
+</html>
